@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --blue-progress: #4169e1;  /* Royal blue for progress bar */
+  --bg-light: #f0f2f5;      /* Light gray background */
+  --text-primary: #1a1a1a;  /* Dark text */
+  --text-secondary: #666;   /* Secondary text */
+  --border-light: #e0e0e0;  /* Light border color */
+}
+
+/* Responsive container */
+.app-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+@media (min-width: 640px) {
+  .app-container {
+    max-width: 640px;
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .app-container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .app-container {
+    max-width: 1024px;
+  }
+}
+
+/* Responsive layouts */
+.score-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+@media (min-width: 640px) {
+  .score-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Progress bar */
+.progress-bar {
+  height: 4px;
+  background-color: var(--bg-light);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: var(--blue-progress);
+  transition: width 0.3s ease;
+}
